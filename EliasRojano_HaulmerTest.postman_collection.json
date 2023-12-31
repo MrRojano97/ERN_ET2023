@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "a7fb5ceb-4edc-418c-bf75-6509013160a7",
+		"name": "EliasRojano_HaulmerTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29338005"
+	},
+	"item": [
+		{
+			"name": "CreateUsers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\": \"Elías\",\n    \"apellido\": \"Rojano\",\n    \"correo\": \"test@rojano.com\",\n    \"telefono\": \"+56912341234\",\n    \"contrasena\": \"SuperUltraSecurePasswordTrustMeImARealLargePassword\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Users/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Users",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User1_Pedro",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Pedro\",\n    \"apellido\": \"Picapiedra\",\n    \"correo\": \"pedro@rojano.com\",\n    \"telefono\": \"+56943214321\",\n    \"contrasena\": \"PiedraGiganteContraseñaSeguraLoSe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Users"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "User2_Marciano",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Mariano\",\n    \"apellido\": \"Marciano\",\n    \"correo\": \"marciano@rojano.com\",\n    \"telefono\": \"+56988887777\",\n    \"contrasena\": \"ElDominioTotalDelMundo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Users"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GetUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserbyID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Users/id/0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Users",
+						"id",
+						"0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetUserbyID_1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/Users/id/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Users",
+								"id",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "GetUserbyID_2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/Users/id/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Users",
+								"id",
+								"2"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "EncryptText",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Texto a Encriptar\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Encrypt",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Encrypt"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Text1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Soy un Texto que se debe encriptar, próximamente deberías verme desencriptado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Encrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Encrypt"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Text2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"Soy un texto que se encriptará y luego se desencriptará ¿no es genial?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Encrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Encrypt"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "DecryptText",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"encrypted\": \"bI+e6oHIYtvCYkYzWq4nnNm+yzpeczKaGfZRC0348jE=\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Decrypt",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Decrypt"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Text1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"encrypted\": \"/IQQwMt9FhW3qUvEpGjk0A/aGB6MlroOQthy2nJiHPulz005zwMLttYRr0Nu1kO1WyVUhg0GDjy5eTUuU8ssTBZxcmro3D/zeTY8BhaQ8NY=\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Decrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Decrypt"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Text2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"encrypted\": \"MNJwwpTlOI8GNj3zlPE+8SfPHx1a3YgA7SNMjnTCg94CtnJG4Zjb1K7pmDmae7KEcc07wSYWyPMU5EB2KOz3JMz3El8yfMF72t90UqbyACM=\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Decrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Decrypt"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5255",
+			"type": "string"
+		}
+	]
+}

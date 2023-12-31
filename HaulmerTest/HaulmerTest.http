@@ -1,0 +1,6 @@
+@HaulmerTest_HostAddress = http://localhost:5255
+
+GET {{HaulmerTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

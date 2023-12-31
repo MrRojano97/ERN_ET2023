@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ern_haulmertest:
+    image: ern_haulmertest
+    build: .
+    ports:
+      - "8097:8080"
