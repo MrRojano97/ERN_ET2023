@@ -55,3 +55,8 @@ Desiciones de desarrollo:
 
 	7. La versión pública de la API se puede encontrar en mi dominio con una url personalizada el cual se le hará entrega mediante correo electrónico con tal de mantenerlo privado. Además de contar con los certificados HTTPS necesarios, también está a través de Cloudflare Proxy lo cual nos brinda una capa de seguridad adicional.
 
+	8. Encriptación AES y Vector de Inicialización
+	Se decidió hacer uso de la tecnología de encriptación AES en conjunto de un Vector de Inicialización porque es una forma estandarizada de encriptar información y altamente utilizada en la industria, compatible de forma sencilla con el proyecto, además se dejó a disposición del usuario la key y el vector de inicialización en Utilities/Encryption.cs
+
+VIDEO DEMO
+https://cloud.mrrojano97.com/s/E9NMyLNirZ3UlFF
